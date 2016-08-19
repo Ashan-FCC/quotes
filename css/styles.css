@@ -1,0 +1,35 @@
+
+	.quotepage h3 {
+		text-align: center;
+		font-family : 'Italianno', cursive;
+		font-size : 50px;
+		font-weight: bold;
+	}
+	
+	body {
+		margin-top : 30px;
+		background-color: #e6ecff;
+	}
+
+	.quotebuttons {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	#quote-text {
+		font-size : 30px;
+	}
+
+	#quote-author {
+		font-size : 15px;
+	}
+
+	.quote-area {
+		padding: 15px 15px 15px 15px;
+		border-style: outset;
+		border-width: 3px;
+		border-radius: 4px;
+		border-color : #4d4dff;
+	  background-color: #fff;
+	  font-family : 'Open Sans';
+	}
