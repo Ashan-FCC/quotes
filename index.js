@@ -24,15 +24,7 @@ function getQuote(){
 		}); // end of ajax;
 	}
 
-function myFacebookLogin() {
-  FB.login(function(){FB.api('/me/feed', 'post', {message: 'Hello, world!'});}, {scope: 'publish_actions'});
-}
-
-function init(){
-  
-}
-$(document).ready(function(){
-  
+$(document).ready(function(){ 
 	console.log("Page finished Loading");
 	getQuote();
 
@@ -46,26 +38,5 @@ $(document).ready(function(){
 		window.open("https://twitter.com/intent/tweet?text="+tweet);
 	});
 
-	$("#facebookShare").click( function(){
-		//$.getScript();
-		$.ajaxSetup({ cache: true });
- 	 	$.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
-  		console.log("Loading facebook sdk")
-   		 FB.init({
-     	 appId: '{1799214136957540}',
-     	 version: 'v2.7' // or v2.1, v2.2, v2.3, ...
-   		 }); 
-   		 
-		var quote = $("#quote-text").html();
-		var author = $("#quote-author").html();
-		var tweet = quote +"\n -" +author;
-		FB.login(function(){
-  		// Note: The call will only work if you accept the permission request
-  		FB.api('/me/feed', 'post', {message: tweet});
-		}, {scope: 'publish_actions'});    
-  //  $('#loginbutton,#feedbutton').removeAttr('disabled');
-   // FB.getLoginStatus(updateStatusCallback);
-  });
 
 	});
-});
